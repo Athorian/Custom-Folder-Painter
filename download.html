@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Téléchargement - CFPainter</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Téléchargement</h1>
+    <p>Accès réservé aux utilisateurs enregistrés.</p>
+</header>
+
+<section class="download-section">
+
+    <div id="password-box">
+        <p>Veuillez entrer le mot de passe :</p>
+        <input type="password" id="pwd">
+        <button class="btn" onclick="checkPassword()">Valider</button>
+    </div>
+
+    <div id="download-link" style="display:none;">
+        <h2>Téléchargement</h2>
+        <p>Merci pour votre achat.</p>
+
+        <!-- Remplace TON_LIEN_MEGA par ton lien Mega.nz -->
+        <a class="btn" href="TON_LIEN_MEGA" target="_blank">Télécharger CFPainter</a>
+    </div>
+
+</section>
+
+<script>
+function checkPassword() {
+    const password = ">U6{xA6cSh5QpDNSh4cH"; // change ici
+    const input = document.getElementById("pwd").value;
+
+    if (input === password) {
+        document.getElementById("password-box").style.display = "none";
+        document.getElementById("download-link").style.display = "block";
+    } else {
+        alert("Mot de passe incorrect.");
+    }
+}
+</script>
+
+<footer>
+    <p>© 2026 CFPainter</p>
+</footer>
+
+</body>
+</html>
