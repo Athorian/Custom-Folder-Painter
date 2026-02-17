@@ -101,11 +101,14 @@
 
         <p>Merci encore pour votre confiance et excellente utilisation de CFPainter.</p>
 
-        <!-- FORMULAIRE FORMSPREE INTÉGRÉ -->
-        <form action="https://formspree.io/f/mnjbvala" method="POST">
+        <!-- FORMULAIRE WEB3FORMS -->
+        <form action="https://api.web3forms.com/submit" method="POST">
 
-            <!-- REDIRECTION AUTOMATIQUE APRÈS ENVOI -->
-            <input type="hidden" name="_redirect" value="confirmation.html">
+            <!-- Clé Web3Forms -->
+            <input type="hidden" name="access_key" value="6d68edc2-7166-432a-baa7-736db16e52a5">
+
+            <!-- Redirection après envoi -->
+            <input type="hidden" name="redirect" value="https://athorian.github.io/Custom-Folder-Painter/confirmation.html">
 
             <label for="civilite">Civilité :</label>
             <select name="civilite" id="civilite" required>
