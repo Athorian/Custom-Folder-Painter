@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Merci pour votre achat - CFPainter</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/cfpainter.ico">
+
+    <style>
+        .box {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 30px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            width: 75%;
+            max-width: 900px;
+            box-sizing: border-box;
+            text-align: left;
+            line-height: 1.55;
+            margin: 40px auto;
+        }
+
+        .box h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BANNIÈRE -->
+    <header class="banner">
+        <img src="assets/img/banner.png" alt="CFPainter Banner">
+    </header>
+
+    <!-- LOGO + TITRE -->
+    <div class="top-header">
+        <img src="assets/img/logo.png" alt="CFPainter Logo" class="logo">
+        <h1>CFPainter</h1>
+    </div>
+
+    <!-- CONTENU -->
+    <div class="box">
+        <h2>Merci pour votre achat !</h2>
+
+        <p>
+            Merci pour votre achat de CFPainter !<br><br>
+            Afin de générer votre clé d’activation, votre code de récupération ainsi que votre accès à la page de téléchargement, merci de compléter le formulaire ci‑dessous.
+        </p>
+
+        <p>Veuillez renseigner :</p>
+
+        <ul>
+            <li>votre civilité,</li>
+            <li>votre nom,</li>
+            <li>votre prénom,</li>
+            <li>l’adresse email utilisée lors de l’achat,</li>
+            <li>votre identifiant de transaction PayPal.</li>
+        </ul>
+
+        <p>
+            Une fois le formulaire envoyé, votre clé d’activation et toutes les informations nécessaires vous seront transmises par email dans un délai maximum de 24 heures.
+        </p>
+
+        <p>Merci encore pour votre confiance et excellente utilisation de CFPainter.</p>
+
+        <!-- FORMULAIRE FORMSPREE INTÉGRÉ -->
+        <form action="https://formspree.io/f/mnjbvala" method="POST">
+
+            <!-- REDIRECTION AUTOMATIQUE APRÈS ENVOI -->
+            <input type="hidden" name="_redirect" value="confirmation.html">
+
+            <label for="civilite">Civilité :</label>
+            <select name="civilite" id="civilite" required>
+                <option value="">-- Sélectionnez --</option>
+                <option value="Mr">Mr</option>
+                <option value="Mme">Mme</option>
+                <option value="Mlle">Mlle</option>
+            </select>
+
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="email">Email utilisé pour l’achat :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="transaction_id">Identifiant de transaction PayPal :</label>
+            <input type="text" id="transaction_id" name="transaction_id" required>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 CFPainter — Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

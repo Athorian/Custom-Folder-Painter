@@ -4,50 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Téléchargement - CFPainter</title>
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/cfpainter.ico">
+
+    <style>
+        .download-section {
+            width: 75%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 30px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            text-align: center;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 60%;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background: #3498db;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Téléchargement</h1>
-    <p>Accès réservé aux utilisateurs enregistrés.</p>
-</header>
+    <!-- BANNIÈRE -->
+    <header class="banner">
+        <img src="assets/img/banner.png" alt="CFPainter Banner">
+    </header>
 
-<section class="download-section">
-
-    <div id="password-box">
-        <p>Veuillez entrer le mot de passe :</p>
-        <input type="password" id="pwd">
-        <button class="btn" onclick="checkPassword()">Valider</button>
+    <!-- LOGO + TITRE -->
+    <div class="top-header">
+        <img src="assets/img/logo.png" alt="CFPainter Logo" class="logo">
+        <h1>CFPainter</h1>
     </div>
 
-    <div id="download-link" style="display:none;">
-        <h2>Téléchargement</h2>
-        <p>Merci pour votre achat.</p>
+    <section class="download-section">
 
-        <!-- Remplace TON_LIEN_MEGA par ton lien Mega.nz -->
-        <a class="btn" href="TON_LIEN_MEGA" target="_blank">Télécharger CFPainter</a>
-    </div>
+        <div id="password-box">
+            <p>Veuillez entrer le mot de passe fourni dans votre email :</p>
+            <input type="password" id="pwd">
+            <button class="btn" onclick="checkPassword()">Valider</button>
+        </div>
 
-</section>
+        <div id="download-link" style="display:none;">
+            <h2>Téléchargement</h2>
+            <p>Merci pour votre achat.</p>
 
-<script>
-function checkPassword() {
-    const password = ">U6{xA6cSh5QpDNSh4cH"; // change ici
-    const input = document.getElementById("pwd").value;
+            <!-- Lien Mega intégré -->
+            <a class="btn" href="https://mega.nz/file/X6YX3YLC#lEfuhrPAE6Ck7SRO-VLcRYmm1TCQvPrO8VBg2X69qjo" target="_blank">
+                Télécharger CFPainter
+            </a>
+        </div>
 
-    if (input === password) {
-        document.getElementById("password-box").style.display = "none";
-        document.getElementById("download-link").style.display = "block";
-    } else {
-        alert("Mot de passe incorrect.");
+    </section>
+
+    <script>
+    function checkPassword() {
+        const password = ">U6{xA6cSh5QpDNSh4cH"; // Code d'accès
+        const input = document.getElementById("pwd").value;
+
+        if (input === password) {
+            document.getElementById("password-box").style.display = "none";
+            document.getElementById("download-link").style.display = "block";
+        } else {
+            alert("Mot de passe incorrect.");
+        }
     }
-}
-</script>
+    </script>
 
-<footer>
-    <p>© 2026 CFPainter</p>
-</footer>
+    <footer>
+        <p>© 2026 CFPainter — Tous droits réservés.</p>
+    </footer>
 
 </body>
 </html>
